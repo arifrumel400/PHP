@@ -73,7 +73,7 @@ a {
     <h1>Hello, world!</h1>
 
 <div class="login-form">
-<form action="phpconnect.php">
+<form action="phpconnect.php" method="POST"> 
 
     <div class="container">
         <h1>Register</h1>
@@ -83,7 +83,7 @@ a {
             <div class="form-group">
 
                <label for="name"><b>FullName</b></label>
-                <input type="text" placeholder="Enter FullName" name="FullName" id="FullName" required>
+                <input type="text" placeholder="Enter FullName" name="fullname" required>
 
             </div>
 
@@ -93,7 +93,7 @@ a {
           <div class="form-group">
 
               <label for="email"><b>Email</b></label>
-              <input type="email" placeholder="Enter Email" name="email" id="email" required>
+              <input type="email" placeholder="Enter Email" name="email" required>
                 
            </div>
 
@@ -101,7 +101,7 @@ a {
          <div class="form-group">
 
              <label for="password"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="password" id="password" required>
+              <input type="password" placeholder="Enter Password" name="password" required>
                 
          </div>
     <hr>

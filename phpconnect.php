@@ -1,8 +1,8 @@
 <?php
 
-$fullname = $_post['fullname'];
-$email = $_post['email'];
-$password = $_post['password'];
+$fullname = $_POST['fullname'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 $servername = "localhost";
 $username = "root";
@@ -11,20 +11,22 @@ $db = 'php_from';
 //
 
 // Create connection
-$conn = mysqli_connect('localhost', 'root','', 'php_from');
+$conn = mysqli_connect($servername, $username, $password, $db);
 // Check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
 $sql = "INSERT INTO register_from (fullname, email, password)
-VALUES ($fullname,$email,$password) );
-register_from$email$password
-if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+VALUES ('$fullname','$email','$password')";
 
-mysqli_close($conn);
+ $query = mysqli_query($conn, $sql); 
+
+ if($query){
+   echo "Registration success"; 
+   } else 
+   {
+     echo "regisrration error"; 
+   }
+
 ?>
